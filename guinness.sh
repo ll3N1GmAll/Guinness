@@ -80,11 +80,12 @@ cat << "EOF"
 EOF
 fi 
 tput sgr0 
-        echo -e "\E[1;34m:::::::::::::::: \e[97mIf Your Tool Of Choice Requires *ROOT* Close Guinness Now & Re-run With SUDO\E[1;34m::::::::::::::::"
-        echo -e "\E[1;34m:::::::::::::::: \e[97mEnter Targets, one per line, in targets.txt\E[1;34m:::::::::::::::::::::::::::::::::::::::::::::::::"
+        echo -e "\E[1;34m:::::::::::::::: \e[97mIf Your Tool Of Choice Requires *ROOT* Close Guinness Now & Re-run With SUDO\E[1;34m :::::::::::::::"
+        echo -e "\E[1;34m:::::::::::::::: \e[97mEnter Targets, one per line, in targets.txt\E[1;34m ::::::::::::::::::::::::::::::::::::::::::::::::"
+        echo -e "\E[1;34m:::::::::::::::: \e[97mEnter Full Path To Script Or Tool If Not Installed System-Wide / In PATH\E[1;34m :::::::::::::::::::"
         echo -e ""
         echo -e "\E[1;34m::::::::::::::: \e[97mFollow Prompts\E[1;34m:::::::::::::::"
-read -p 'Enter First Section of Command Up To The Target Parameter (i.e., nuclei -u): ' sectionone; read -p 'Enter Last Section of Command That Comes AFTER Target Parameter (i.e., -t /home/user/nuclei/cmd/nuclei/cmd/nuclei/ProxyShell/proxyshell.yaml): ' sectiontwo; 
+read -p 'Enter First Section of Command Up To The Target Parameter (i.e., nuclei -u OR /home/user/impacket-fortra/examples/GetUserSPNs.py...): ' sectionone; read -p 'Enter Last Section of Command That Comes AFTER Target Parameter (i.e., -t /home/user/nuclei/cmd/nuclei/cmd/nuclei/ProxyShell/proxyshell.yaml): ' sectiontwo; 
 inputfile=targets.txt
 
         for TARGET in $(cat $inputfile)
